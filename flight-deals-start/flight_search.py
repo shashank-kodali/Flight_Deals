@@ -6,7 +6,6 @@ from requests import *
 APIKey = "NWscJE7fcjklZMIQhuQEvxCAXGtccNhw"
 APISecret = "TpZlhpxUfvmNGvjW"
 endpoint = "https://test.api.amadeus.com/reference-data/locations/cities"
-"
 
 headers = {
     "Authorization" : "Bearer RuYtTAWqRNpuUHjNRShEXGZXoI1K"
