@@ -3,6 +3,7 @@ from pprint import pprint
 from flight_search import FlightSearch
 import time
 from datetime import datetime, timedelta
+from flight_data import find_cheapest_flight
 
 ORIGIN_CITY_IATA = "LON"
 
@@ -30,4 +31,8 @@ for destination in sheet_data:
                                         destination["iataCode"],
                                         from_time=tomorrow,
                                         to_time=six_months_from_now)
-    print(flights)
+    
+    cheapest_flight = find_cheapest_flight(flights)
+    print(f"{destination['city']}: £{cheapest_flight.price}")
+
+    time.sleep(2)
