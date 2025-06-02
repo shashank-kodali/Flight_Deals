@@ -66,7 +66,7 @@ class FlightSearch:
             "returnDate" : to_time.strftime("%Y-%m-%d"),
             "adults" : 1,
             "nonStop" : "true",
-            "currencyCode": "GBP",
+            "currencyCode": "INR",
             "max" : "10"
         }
 
