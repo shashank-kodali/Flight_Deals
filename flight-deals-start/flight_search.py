@@ -57,7 +57,7 @@ class FlightSearch:
 
         return response.json()['access_token']
 
-    def check_flights(self, origin_airport, destination,from_time, to_time):
+    def check_flights(self, origin_airport, destination,from_time, to_time, is_direct=True):
         headers = {"Authorization" : f"Bearer {self._token}"}
         query ={
             "originLocationCode" : origin_airport,
@@ -65,7 +65,7 @@ class FlightSearch:
             "departureDate" : from_time.strftime("%Y-%m-%d"),
             "returnDate" : to_time.strftime("%Y-%m-%d"),
             "adults" : 1,
-            "nonStop" : "true",
+            "nonStop": "true" if is_direct else "false",
             "currencyCode": "INR",
             "max" : "10"
         }
