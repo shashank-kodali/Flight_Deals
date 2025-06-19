@@ -14,7 +14,7 @@ class DataManager:
         self._user = os.environ["SHEETY_USRERNAME"]
         self._password = os.environ["SHEETY_PASSWORD"]
         self.prices_endpoint = os.environ["SHEETY_PRICES_ENDPOINT"]
-        self.users_endpoint = os.environ["SHEETY_USERS_ENDPOINT"]2
+        self.users_endpoint = os.environ["SHEETY_USERS_ENDPOINT"]
         self._authorization = HTTPBasicAuth(self._user, self._password)
         self.destination_data = {}
 
